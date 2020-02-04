@@ -114,7 +114,7 @@ class TourGuyProfile  extends Component {
 
       for(let i in res.data){
           this.setState({name: this.state.name.concat(res.data[i].name)})
-          this.setState({packImage: this.state.packImage.concat(res.data[i].packImage)} )
+          this.setState({packImage: this.state.packImage.concat(res.data[i].image)} )
           this.setState({description: this.state.description.concat(res.data[i].description)})
       }
     })
@@ -179,6 +179,7 @@ onsubmitTheStateToAdd = ()=>{
 //   .catch(err => console.log(err))
 // }
 
+  
   handleChange = date => {
     this.setState({
       startDate: date
